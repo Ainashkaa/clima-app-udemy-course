@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+struct WeatherData: Decodable{
+    let name: String
+    let main: Main
+    var weather: [Weather]
+    
+}
+
+struct Main: Decodable{
+    let temp: Double
+}
+
+struct Weather: Decodable {
+    var id: Int
+}
+
+
